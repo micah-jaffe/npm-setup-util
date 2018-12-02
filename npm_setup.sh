@@ -7,7 +7,6 @@ project_name=${PWD##*/}
 
 npm init -y
 
-# touch package.json
 cat << EOF > package.json
 {
     "name": "$project_name",
@@ -33,7 +32,6 @@ npm install babel-loader
 npm install react
 npm install react-dom
 
-# touch index.html
 cat << EOF > index.html
 <!DOCTYPE html>
 <html>
@@ -58,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 EOF
 
-# touch webpack.config.js
 cat << EOF > webpack.config.js
 const path = require('path');
 
@@ -90,7 +87,6 @@ module.exports = {
 };
 EOF
 
-touch .gitignore
 cat << EOF > .gitignore
 node_modules/
 dist/bundle.js
